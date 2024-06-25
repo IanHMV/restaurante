@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="stylesheet/estilos.css" />
+    <link rel="stylesheet" href="stylesheet/normalize.css" />
+    <script
+      src="https://kit.fontawesome.com/82fbe5a20d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="encabezado">
+      <div class="contenedor-navegacion">
+        <div class="contenido-navegacion contenedor">
+          <div class="logo">
+            <h2>
+              Ristorante <span class="verde">Tu</span><span>ri</span
+              ><span class="rojo">lli</span>
+            </h2>
+          </div>
+          <nav class="navegacion ocultar">
+            <a href="#">Inicio</a>
+            <a href="#">Sobre nosotros</a>
+            <a href="#">Menu</a>
+            <a href="#">Chef</a>
+            <a href="#">Contacto</a>
+          </nav>
+
+          <div class="hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contenido-header">
+        <div class="contenedor-encabezado">
+          <div class="texto-encabezado">
+            <h2>Accoglienza!</h2>
+            <a href="#" class="btn bordes">Il nostro menu</a>
+          </div>
+
+          <video autoplay loop muted>
+            <source src="img/bg_video.mp4" />
+          </video>
+        </div>
+      </div>
+    </header>
+
+    <div class="contenedor-nosotros">
+      <div class="texto-nosotros">
+        <p class="bienvenida">Bienvenido a</p>
+        <h1>Ristorante Turilli</h1>
+        <p class="descripcion">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid
+          reprehenderit error quibusdam provident vitae accusamus molestiae,
+          molestias ea ducimus quae ratione, illo fugit commodi facilis,
+          nesciunt unde aliquam aperiam ut? Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Quaerat eius illum reprehenderit,
+          similique facere nulla excepturi non temporibus ullam sit amet laborum
+          totam! In vel voluptatem iusto, voluptate expedita iure!
+        </p>
+        <a href="#" class="btn btn-rojo">Contactar</a>
+      </div>
+
+      <div class="imagenes-nosotros">
+        <div class="imagenes1">
+          <img data-src="/img/nosotros1.webp" alt="mujer comiendo pizza" />
+        </div>
+        <div class="imagenes2">
+          <img data-src="img/nosotros2.webp" alt="mujeres comiendo pizza" />
+          <img data-src="img/nosotros3.webp" alt="pasta" />
+        </div>
+      </div>
+    </div>
+
+    <section class="menu contenedor">
+      <h2 class="texto-platillos">Platillos Populares</h2>
+      <div class="botones-platillos">
+        <button class="btn todos">Todos</button>
+        <button class="btn ensaladas">Ensaladas</button>
+        <button class="btn pasta">Pasta</button>
+        <button class="btn pizza">Pizza</button>
+        <button class="btn postres">Postres</button>
+      </div>
+
+      <div class="platillos">
+        <div class="platillo" data-platillo="ensalada">
+          <img data-src="img/ensalada.webp" alt="ensalada" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="ensalada">
+          <img data-src="img/ensalada2.webp" alt="ensalada" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="ensalada">
+          <img data-src="img/ensalada2.webp" alt="ensalada" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="platillo" data-platillo="pasta">
+          <img data-src="img/pasta1.webp" alt="pasta" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pasta">
+          <img data-src="img/pasta2.webp" alt="pasta" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pasta">
+          <img data-src="img/pasta2.webp" alt="pasta" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="platillo" data-platillo="pizza">
+          <img data-src="img/pizza1.webp" alt="pizza" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pizza">
+          <img data-src="img/pizza2.webp" alt="pizza" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="pizza">
+          <img data-src="img/pizza2.webp" alt="pizza" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+
+        <div class="platillo" data-platillo="postre">
+          <img data-src="img/postres1.webp" alt="postre" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="postre">
+          <img data-src="img/postres2.webp" alt="postre" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+        <div class="platillo" data-platillo="postre">
+          <img data-src="img/postres3.webp" alt="postre" />
+          <h2>Quinoa</h2>
+          <p>Quinoa, cerezas, tomate, aceitunas, cereal</p>
+          <div class="precio">
+            <p>$40.0</p>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="separador">
+      <div class="contenido-separador contenedor">
+        <h2>Comida italiana para empezar el dia</h2>
+        <p>Empiza tu dia comiendo deliciosa comida o un cafe italiano</p>
+        <a href="#" class="btn">Ordenar ahora</a>
+      </div>
+    </div>
+
+    <section class="chef">
+      <h2>Chef ejecutivo</h2>
+      <div class="contenido-chef">
+        <div class="texto-chef">
+          <h3>
+            La excelencia esta en la diversidad y el modo de progresar es
+            conocer y comparar las diversidades de productos, culturas y
+            tecnicas
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni culpa
+            porro, accusamus esse minima fugit ut soluta excepturi quos eligendi
+            dicta exercitationem modi quis sed? Nostrum sequi ex expedita vitae?
+          </p>
+          <a href="#" class="btn">Leer Biografia</a>
+        </div>
+
+        <div class="imagen-chef">
+          <img data-src="img/chef.webp" alt="fotografia del chef" />
+        </div>
+      </div>
+    </section>
+
+    <div class="formulario-contacto">
+      <div class="informacion-contacto">
+        <h3>Contactanos</h3>
+        <p><i class="fa-solid fa-location-dot"></i> 23. Roma Italia</p>
+        <p><i class="fa-solid fa-envelope"></i> Ian@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>3121215468</p>
+        <div class="redes-sociales">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+
+      <form class="formulario">
+
+        <div class="input-formulario">
+          <label for="nombre">Nombre</label>
+          <input type="text" placeholder="Pedro" id="nombre">
+        </div>
+        <div class="input-formulario">
+          <label for="correo">Correo</label>
+          <input type="text" placeholder="ejemplo@gmail.com" id="correo">
+        </div>
+        <div class="input-formulario">
+          <label for="telefono">Telefono</label>
+          <input type="text" placeholder="+52 312 123 123 1234" id="telefono">
+        </div>
+        <div class="input-formulario">
+          <label for="mensaje">Mensaje</label>
+          <textarea name="" id="mensaje"></textarea>
+        </div>
+        <div class="input-formulario">
+          <input type="submit" value="Enviar" class="btn">
+        </div>
+      </form>
+    </div>
+
+    <div class="pie-pagina">
+      <div class="contenedor-piepagina">
+        <div class="info">
+          <h3>Direccion</h3>
+          <p>23. Roma Italia</p>
+        </div>
+        <div class="info">
+          <h3>Dias Especiales</h3>
+          <p>Sabados y Jueves 7am - 8pm</p>
+        </div>
+        <div class="info">
+          <h3>Horarios</h3>
+          <p>Lunes - Domingo 7am - 8pm</p>
+          <div class="contenedor-redes">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Noticias</h3>
+          <p>Suscribete para recibir mas noticias</p>
+          <input type="email" placeholder="Tu correo">
+          <input type="submit" class="btn" value="suscribirse">
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>Todos los derechos reservados &copy; 2024 Ristorante Turilli, Desarrollado por Ian Martinez</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,993 @@
+@import "estilosBase";
+
+@mixin titulos($fontF-titulos, $fontW-titulos) {
+    font-family: $fontF-titulos;
+    font-weight: $fontW-titulos;
+  }
+
+@mixin parrafos($fontF-parrafos, $fontW-parrafos) {
+    font-family: $fontF-parrafos;
+    font-weight: $fontW-parrafos;
+}
+
+@keyframes desplazamiento {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+// h1{
+//     @include titulos($titulos-fontF, 700);
+// }
+
+// p{
+//     @include parrafos($parrafos-fontF, 400);
+// }
+
+html{
+    box-sizing: border-box;
+    font-size: 10px; 
+
+    .btn{
+        text-decoration: none;
+        color: $blanco;
+        font-size: 2.2rem;
+        text-transform: capitalize;
+        border: 4px solid $blanco;
+        border-radius: 5px;
+        padding: 1rem 5rem;
+        margin: 0 auto;
+        transition: all .3s ease-in-out;
+    }
+
+    body{
+        font-size: 1.6rem;
+        overflow-x: hidden;
+
+        h1,h2{
+            @include titulos($titulos-fontF,700)
+        }
+
+        h3, p, a{
+            @include parrafos($parrafos-fontF, 400)
+        }
+
+        .pantalla-completa{
+            position: absolute;
+            top: 0;
+            left: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0,0,0,.5);
+            z-index: 4;
+        }
+
+        .encabezado{
+
+            .contenedor-navegacion{
+                background-color: $oscuro;
+
+
+                // Encabezado
+                .contenido-navegacion{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    position: relative;
+                    z-index: 5;
+
+                    .logo{
+                        margin: 0 0 0 2%;
+
+                        h2{
+                            color: $blanco;
+                            font-size:  3rem;
+                            .rojo{
+                                color: $rojo;
+                            }
+                            .verde{
+                                color: $verde;
+                            }
+                        }
+                    }
+
+                    .navegacion{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100vh;
+                        width: 30%;
+                        background-color: $oscuro;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: start;
+                        align-items: flex-start;
+                        color: $blanco;
+                        animation: desplazamiento 0.5s ease-in-out;
+
+                        a{
+                            display: block;
+                            padding: 1rem;
+                            color: $blanco;
+                            text-decoration: none;
+                            font-size: 2rem;
+                            margin: 2% 0 2% 5%;
+                            transition: color .3s ease-in-out;
+                        }
+                        
+                        .btn-cerrar{
+                            font-size: 3rem;
+                            color: $blanco;
+                            position: absolute;
+                            top: 0;
+                            right: 50px;
+                            font-weight: bold;
+                            user-select: none;
+
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+
+                        & > a:first-child {
+                            margin-top: 20%;
+                          }
+                    }
+
+                    a:nth-child(even):hover { //los pares se hacen de color rojo con even
+                        color: $rojo;
+                    }
+
+                    a:nth-child(odd):hover { //los impares se hacen de color rojo con even
+                        color: $verde;
+                    }
+
+                    .ocultar {
+                        display: none;
+                    }
+
+                    .hamburguesa{
+                        margin: 0 2% 0 0;
+                        span{
+                            display: block;
+                            background-color: $blanco;
+                            width: 5rem;
+                            height: .5rem;
+                            margin-bottom: .5rem;
+                        }
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+                
+                .contenedor{
+                    margin: 0 auto;
+                }
+            }
+
+            .contenido-header{
+
+                position: relative;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0,0,0,.5);
+                }
+                .contenedor-encabezado{
+
+                    .texto-encabezado{
+                        position: absolute;
+                        z-index: 2;
+                        width: 100%;
+                        height: 80%;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        h2{
+                            color: $blanco;
+                            font-size: 8rem;
+                        }
+
+                        .btn{
+
+                            &:hover{
+                                color: $verde;
+                                background-color: $blanco;
+                            }
+                        }
+
+                    }
+
+                    video{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .contenedor-nosotros{
+            display: flex;
+            width: 95%;
+            margin: 0 auto;
+            justify-content: space-between;
+            padding-top: 5rem;
+
+            .texto-nosotros{
+                width: 50%;
+                flex: 0 0 calc(50% - 1rem); //El primer valor es si quieres que se haga mas grande, el segundo es si quieres que se haga mas pequeno y el ultimo es la base
+                text-align: justify;
+
+                .bienvenida{
+                    font-size: 3rem;
+                    color: $verde;
+                }
+
+                h1{
+                    font-size: 5rem;
+                }
+                
+                .descripcion{
+                    font-size: 2rem;
+                }
+
+                .btn-rojo{
+                    background-color: $rojo;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    display: inline-block;
+                    margin-top: 2rem;
+                }
+            }
+
+            .imagenes-nosotros{
+                width: 50%;
+                flex: 0 0 calc(50% - 1rem); //El primer valor es si quieres que se haga mas grande, el segundo es si quieres que se haga mas pequeno y el ultimo es la base
+                display: flex;
+                justify-content: space-between;
+
+                .imagenes1{
+                    flex: 0 0 calc(50% - 1rem);
+
+                    img{
+                        max-width: 100%;
+                        margin-bottom: 1rem;
+                        border-radius: 5px;
+                    }
+                }
+                .imagenes2{
+                    flex: 0 0 calc(50% - 1rem);
+
+                    img{
+                        max-width: 100%;
+                        margin-bottom: 1rem;
+                        border-radius: 5px;
+                    } 
+                }
+            }
+        }
+    
+        .menu{
+            padding-top: 4rem;
+            width: 95%;
+            margin: 0 auto;
+
+            .texto-platillos{
+                text-align: center;
+                font-size: 5rem;
+            }
+
+            .botones-platillos{
+                
+                button{
+                    background-color: $verde;
+                    border: none;
+                    display: inline-block;
+                    margin-bottom: 2rem;
+                    @include parrafos($parrafos-fontF, 400);
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: $rojo;
+                    }
+                }
+            }
+
+            .platillos{
+                display: flex ;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .platillo{
+                    flex: 0 0 calc(33.3% - 1rem);
+                    border: 1px solid #e1e1e1;
+                    padding: 2rem;
+                    border-radius: 5px;
+
+                    h2{
+                        text-align: center;
+                    }
+
+                    p{
+                        font-size: 1.8rem;
+                    }
+
+                    .precio{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        p{
+                            font-weight: bold;
+                            font-size: 2rem;
+                        }
+
+                        button{
+                            padding: 1rem;
+                            border-radius: 5px;
+                            border: none;
+                            background-color: $rojo;
+                            color: $blanco;
+                            height: 3.8rem;
+
+                        }
+                    }
+
+                    img{
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        .separador{
+            width: 95%;
+            margin: 0 auto;
+            background-image: url('/img/ensalada.webp');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 2;
+
+            .contenido-separador{
+                padding: 5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                h2{
+                    font-size: 5rem;
+                    color: $blanco;
+                }
+
+                p{
+                    color: $blanco;
+                    font-size: 3rem;
+                }
+
+                .btn{
+                    display: inline-block;
+                    background-color: $verde;
+                    border: none;
+
+                    &:hover{
+                        background-color: $rojo;
+                    }
+                }
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,.5);
+                z-index: -1;
+            }
+        }
+
+        .chef{
+            width: 95%;
+            margin: 0 auto;
+
+            h2{
+                background-color: $rojo;
+                display: inline-block;
+                padding: 1rem 3rem;
+                color: $blanco;
+                font-size: 4rem;
+            }
+
+            .contenido-chef{
+                display: flex;
+                justify-content: space-between;
+
+                .texto-chef{
+                    flex: 0 0 calc(50% - 1rem);
+
+                    h3{
+                        font-size: 3rem;
+                        text-align: justify;
+                    }
+    
+                    p{
+                        font-size: 2rem;
+                        text-align: justify;
+                    }
+    
+                    .btn{
+                        background-color: $verde;
+                        
+                        &:hover{
+                            background-color: $rojo;
+                        }
+                    }
+                }
+    
+                .imagen-chef{
+                    flex: 0 0 calc(50% - 1rem);
+                    img{
+                        max-width: 100%;
+                    }
+                }
+
+            }
+        }
+
+        .formulario-contacto{
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding: 5rem;
+
+            .informacion-contacto{
+                flex: 0 0 calc(50% - 1rem);
+                background-color: $oscuro;
+                color: $blanco;
+                height: 60rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h3{
+                    font-size: 4rem;
+                    @include titulos($titulos-fontF, 700);
+                }
+
+                p{
+                    font-size: 2.2rem;
+                }
+
+                i{
+                    margin-right: 1rem;
+                }
+
+                .redes-sociales{
+                
+                    i{
+                        font-size: 3rem;
+                    }
+                }
+            }
+
+            .formulario{
+                flex: 0 0 calc(50% - 1rem);
+                padding: 5rem;
+
+                .input-formulario{
+    
+                    label{
+                        display: block;
+                        font-size: 2rem;
+                        @include parrafos($parrafos-fontF, 400);
+                        margin-bottom: 1.5rem;
+                    }
+    
+                    input{
+                        width: 100%;
+                        padding: 1rem 1.6rem;
+                        border: 1px solid #e1e1e1;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    textarea{
+                        width: 100%;
+                        height: 20rem;
+                        resize: none;
+                        padding: 1rem 1.6rem;
+                        border: 1px solid #e1e1e1;
+                        border-radius: 5px;
+                        outline: none;
+                        @include parrafos($parrafos-fontF, 400);
+                    }
+    
+                    .btn{
+                        background-color: $verde;
+
+                        &:hover{
+                            background-color: $rojo;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pie-pagina{
+            background-color: rgb(20,20,20);
+            padding: 5rem;
+            .contenedor-piepagina{
+                display: flex;
+                justify-content: space-between;
+
+                .info{
+                    flex: 0 0 calc(25% - 1rem);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    
+
+                    h3{
+                        font-weight: bold;
+                        color: $blanco;
+                        font-size: 2.2rem;
+                    }
+
+                    p{
+                        color: $blanco;
+                        font-size: 1.8rem
+                    }
+
+                    i{
+                        color: $blanco;
+                    }
+
+                    input[type="email"]{
+                        @include parrafos($parrafos-fontF, 400);
+                        display: inline-block;
+                        padding: 1rem;
+                        margin-bottom: 1rem;
+                        border-radius: 5px;
+                        outline: none;
+                        width: 70%;
+                    }
+
+                    input[type="submit"]{
+                        @include parrafos($parrafos-fontF, 400);
+                        padding: .5rem 2rem;
+                        font-size: 2rem;
+                        border-radius: 0;
+                        border: none;
+                        background-color: $verde;
+
+                        &:hover{
+                            background-color: $rojo;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer{
+            display: inline-block;
+            background-color: $oscuro;
+            width: 100%;
+            padding: 2rem;
+
+            p{
+                text-align: center;
+                color: $blanco;
+                font-size: 2rem;
+            }
+        }
+    }
+    
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+@media screen  and (max-width: 992px){
+    html{
+
+    
+        body{
+
+            h1,h2{
+            }
+    
+            h3, p, a{
+            }
+    
+            .pantalla-completa{
+
+            }
+    
+            .encabezado{
+    
+                .contenedor-navegacion{
+
+    
+                    // Encabezado
+                    .contenido-navegacion{
+
+    
+                        .logo{
+
+                            h2{
+
+                                .rojo{
+
+                                }
+                                .verde{
+                                }
+                            }
+                        }
+    
+                        .navegacion{
+                            width: 100%;
+                            align-items: center;
+    
+                            a{
+                                font-size: 3rem;
+                            }
+                            
+                            .btn-cerrar{
+                                right: 30px;
+                        }
+    
+                        
+    
+                        .ocultar {
+                            
+                        }
+    
+                        .hamburguesa{
+
+                            span{
+                                
+                            }
+                        }
+                        
+                    }
+                    
+                    .contenedor{
+                        
+                    }
+                }
+    
+                
+            }
+
+            .contenido-header{
+
+                .contenedor-encabezado{
+
+                    .texto-encabezado{
+
+                        h2{
+                            font-size: 4rem;
+                        }
+
+                        .btn{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        
+            
+        }
+
+        .contenedor-nosotros{
+            display: flex;
+            flex-direction: column;
+
+            .texto-nosotros{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .bienvenida{
+                    text-align: center;
+                }
+
+                h1{
+                    text-align: center;
+                }
+                
+                .descripcion{
+                    text-align: center;
+                }
+
+                .btn-rojo{
+
+                }
+            }
+
+            .imagenes-nosotros{
+                width: 100%;
+
+                .imagenes1{
+
+                    img{
+
+                    }
+                }
+                .imagenes2{
+
+                    img{
+
+                    } 
+                }
+            }
+        }
+        
+        .menu{
+            padding-top: 4rem;
+            width: 95%;
+            margin: 0 auto;
+
+            .texto-platillos{
+                text-align: center;
+                font-size: 5rem;
+            }
+
+            .botones-platillos{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                button{
+                    flex: 0 0 calc(50% - 1rem);
+                    padding: 1rem 3rem;
+                }
+            }
+
+            .platillos{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .platillo{
+                    flex: 0 0 calc(100% - 1rem);
+
+                    h2{
+                        
+                    }
+
+                    p{
+                        
+                    }
+
+                    .precio{
+                        display: flex;
+                        justify-content: space-between;
+
+                        p{
+
+                        }
+
+                        button{
+
+                        }
+                    }
+
+                    img{
+                        
+                    }
+                }
+            }
+        }
+
+        .separador{
+            width: 95%;
+            margin: 0 auto;
+            background-image: url('/img/ensalada.webp');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            position: relative;
+            z-index: 2;
+
+            .contenido-separador{
+                
+                h2{
+                    font-size: 3rem;
+                    text-align: center;
+                }
+
+                p{
+                    font-size: 2rem;
+                    text-align: center;
+                }
+
+                .btn{
+                    font-size: 1.5rem;
+                    text-align: center;
+                }
+            }
+        }
+        
+        .chef{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            h2{
+                
+            }
+
+            .contenido-chef{
+                display: block;
+
+                .texto-chef{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h3{
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                    }
+    
+                    p{
+                        
+                    }
+    
+                    .btn{
+                        display: inline-block;
+                        margin: 1rem auto;
+                        &:hover{
+                            
+                        }
+                    }
+                }
+    
+                .imagen-chef{
+                    
+                    img{
+                        
+                    }
+                }
+
+            }
+
+        }
+
+        .formulario-contacto{
+            width: 95%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+
+            .informacion-contacto{
+                flex: 0 0 calc(100% - 1rem);
+                background-color: $oscuro;
+                color: $blanco;
+                height: 60rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 2.5rem;
+
+                h3{
+                    font-size: 2.5rem;
+                    @include titulos($titulos-fontF, 700);
+                }
+
+                p{
+                    font-size: 1.5rem;
+                }
+
+                i{
+                    margin-right: 1rem;
+                }
+
+                .redes-sociales{
+                
+                    i{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+            .formulario{
+                flex: 0 0 calc(100% - 1rem);
+                padding: 2rem 0 0 0;
+
+                .input-formulario{
+    
+                    label{
+                        padding: 1rem 0 0 0;
+                        display: block;
+                        font-size: 2rem;
+                        @include parrafos($parrafos-fontF, 400);
+                        margin-bottom: 1.5rem;
+                    }
+    
+                    input{
+                        width: 100%;
+                        padding: 1rem 1.6rem;
+                        border: 1px solid #e1e1e1;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    textarea{
+                        width: 100%;
+                        height: 20rem;
+                        resize: none;
+                        padding: 1rem 1.6rem;
+                        border: 1px solid #e1e1e1;
+                        border-radius: 5px;
+                        outline: none;
+                        @include parrafos($parrafos-fontF, 400);
+                    }
+    
+                    .btn{
+                        background-color: $verde;
+                    }
+                }
+            }
+        }
+
+        .pie-pagina{
+            padding: 2rem;
+            .contenedor-piepagina{
+                display: block;
+
+                .info{
+
+                    h3{
+                        text-align: center;
+                    }
+
+                    p{
+                        text-align: center;
+                    }
+
+                    i{
+                        
+                    }
+
+                    input[type="email"]{
+                        
+                    }
+
+                    input[type="submit"]{
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+}

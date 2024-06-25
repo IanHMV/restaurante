@@ -1,0 +1,540 @@
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
+html {
+  box-sizing: border-box;
+  font-size: 10px; }
+  html .btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    padding: 1rem 5rem;
+    margin: 0 auto;
+    transition: all .3s ease-in-out; }
+  html body {
+    font-size: 1.6rem;
+    overflow-x: hidden; }
+    html body h1, html body h2 {
+      font-family: "Arima Madurai", cursive;
+      font-weight: 700; }
+    html body h3, html body p, html body a {
+      font-family: "Mulish", sans-serif;
+      font-weight: 400; }
+    html body .pantalla-completa {
+      position: absolute;
+      top: 0;
+      left: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 4; }
+    html body .encabezado .contenedor-navegacion {
+      background-color: #000; }
+      html body .encabezado .contenedor-navegacion .contenido-navegacion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 5; }
+        html body .encabezado .contenedor-navegacion .contenido-navegacion .logo {
+          margin: 0 0 0 2%; }
+          html body .encabezado .contenedor-navegacion .contenido-navegacion .logo h2 {
+            color: #fff;
+            font-size: 3rem; }
+            html body .encabezado .contenedor-navegacion .contenido-navegacion .logo h2 .rojo {
+              color: #881014; }
+            html body .encabezado .contenedor-navegacion .contenido-navegacion .logo h2 .verde {
+              color: #00A149; }
+        html body .encabezado .contenedor-navegacion .contenido-navegacion .navegacion {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 100vh;
+          width: 30%;
+          background-color: #000;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: flex-start;
+          color: #fff;
+          animation: desplazamiento 0.5s ease-in-out; }
+          html body .encabezado .contenedor-navegacion .contenido-navegacion .navegacion a {
+            display: block;
+            padding: 1rem;
+            color: #fff;
+            text-decoration: none;
+            font-size: 2rem;
+            margin: 2% 0 2% 5%;
+            transition: color .3s ease-in-out; }
+          html body .encabezado .contenedor-navegacion .contenido-navegacion .navegacion .btn-cerrar {
+            font-size: 3rem;
+            color: #fff;
+            position: absolute;
+            top: 0;
+            right: 50px;
+            font-weight: bold;
+            user-select: none; }
+            html body .encabezado .contenedor-navegacion .contenido-navegacion .navegacion .btn-cerrar:hover {
+              cursor: pointer; }
+          html body .encabezado .contenedor-navegacion .contenido-navegacion .navegacion > a:first-child {
+            margin-top: 20%; }
+        html body .encabezado .contenedor-navegacion .contenido-navegacion a:nth-child(even):hover {
+          color: #881014; }
+        html body .encabezado .contenedor-navegacion .contenido-navegacion a:nth-child(odd):hover {
+          color: #00A149; }
+        html body .encabezado .contenedor-navegacion .contenido-navegacion .ocultar {
+          display: none; }
+        html body .encabezado .contenedor-navegacion .contenido-navegacion .hamburguesa {
+          margin: 0 2% 0 0; }
+          html body .encabezado .contenedor-navegacion .contenido-navegacion .hamburguesa span {
+            display: block;
+            background-color: #fff;
+            width: 5rem;
+            height: .5rem;
+            margin-bottom: .5rem; }
+          html body .encabezado .contenedor-navegacion .contenido-navegacion .hamburguesa:hover {
+            cursor: pointer; }
+      html body .encabezado .contenedor-navegacion .contenedor {
+        margin: 0 auto; }
+    html body .encabezado .contenido-header {
+      position: relative; }
+      html body .encabezado .contenido-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); }
+      html body .encabezado .contenido-header .contenedor-encabezado .texto-encabezado {
+        position: absolute;
+        z-index: 2;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column; }
+        html body .encabezado .contenido-header .contenedor-encabezado .texto-encabezado h2 {
+          color: #fff;
+          font-size: 8rem; }
+        html body .encabezado .contenido-header .contenedor-encabezado .texto-encabezado .btn:hover {
+          color: #00A149;
+          background-color: #fff; }
+      html body .encabezado .contenido-header .contenedor-encabezado video {
+        width: 100%;
+        height: 100%; }
+    html body .contenedor-nosotros {
+      display: flex;
+      width: 95%;
+      margin: 0 auto;
+      justify-content: space-between;
+      padding-top: 5rem; }
+      html body .contenedor-nosotros .texto-nosotros {
+        width: 50%;
+        flex: 0 0 calc(50% - 1rem);
+        text-align: justify; }
+        html body .contenedor-nosotros .texto-nosotros .bienvenida {
+          font-size: 3rem;
+          color: #00A149; }
+        html body .contenedor-nosotros .texto-nosotros h1 {
+          font-size: 5rem; }
+        html body .contenedor-nosotros .texto-nosotros .descripcion {
+          font-size: 2rem; }
+        html body .contenedor-nosotros .texto-nosotros .btn-rojo {
+          background-color: #881014;
+          font-weight: bold;
+          border-radius: 10px;
+          display: inline-block;
+          margin-top: 2rem; }
+      html body .contenedor-nosotros .imagenes-nosotros {
+        width: 50%;
+        flex: 0 0 calc(50% - 1rem);
+        display: flex;
+        justify-content: space-between; }
+        html body .contenedor-nosotros .imagenes-nosotros .imagenes1 {
+          flex: 0 0 calc(50% - 1rem); }
+          html body .contenedor-nosotros .imagenes-nosotros .imagenes1 img {
+            max-width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 5px; }
+        html body .contenedor-nosotros .imagenes-nosotros .imagenes2 {
+          flex: 0 0 calc(50% - 1rem); }
+          html body .contenedor-nosotros .imagenes-nosotros .imagenes2 img {
+            max-width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 5px; }
+    html body .menu {
+      padding-top: 4rem;
+      width: 95%;
+      margin: 0 auto; }
+      html body .menu .texto-platillos {
+        text-align: center;
+        font-size: 5rem; }
+      html body .menu .botones-platillos button {
+        background-color: #00A149;
+        border: none;
+        display: inline-block;
+        margin-bottom: 2rem;
+        font-family: "Mulish", sans-serif;
+        font-weight: 400;
+        cursor: pointer; }
+        html body .menu .botones-platillos button:hover {
+          background-color: #881014; }
+      html body .menu .platillos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        html body .menu .platillos .platillo {
+          flex: 0 0 calc(33.3% - 1rem);
+          border: 1px solid #e1e1e1;
+          padding: 2rem;
+          border-radius: 5px; }
+          html body .menu .platillos .platillo h2 {
+            text-align: center; }
+          html body .menu .platillos .platillo p {
+            font-size: 1.8rem; }
+          html body .menu .platillos .platillo .precio {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; }
+            html body .menu .platillos .platillo .precio p {
+              font-weight: bold;
+              font-size: 2rem; }
+            html body .menu .platillos .platillo .precio button {
+              padding: 1rem;
+              border-radius: 5px;
+              border: none;
+              background-color: #881014;
+              color: #fff;
+              height: 3.8rem; }
+          html body .menu .platillos .platillo img {
+            max-width: 100%; }
+    html body .separador {
+      width: 95%;
+      margin: 0 auto;
+      background-image: url("/img/ensalada.webp");
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 2; }
+      html body .separador .contenido-separador {
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        html body .separador .contenido-separador h2 {
+          font-size: 5rem;
+          color: #fff; }
+        html body .separador .contenido-separador p {
+          color: #fff;
+          font-size: 3rem; }
+        html body .separador .contenido-separador .btn {
+          display: inline-block;
+          background-color: #00A149;
+          border: none; }
+          html body .separador .contenido-separador .btn:hover {
+            background-color: #881014; }
+      html body .separador::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1; }
+    html body .chef {
+      width: 95%;
+      margin: 0 auto; }
+      html body .chef h2 {
+        background-color: #881014;
+        display: inline-block;
+        padding: 1rem 3rem;
+        color: #fff;
+        font-size: 4rem; }
+      html body .chef .contenido-chef {
+        display: flex;
+        justify-content: space-between; }
+        html body .chef .contenido-chef .texto-chef {
+          flex: 0 0 calc(50% - 1rem); }
+          html body .chef .contenido-chef .texto-chef h3 {
+            font-size: 3rem;
+            text-align: justify; }
+          html body .chef .contenido-chef .texto-chef p {
+            font-size: 2rem;
+            text-align: justify; }
+          html body .chef .contenido-chef .texto-chef .btn {
+            background-color: #00A149; }
+            html body .chef .contenido-chef .texto-chef .btn:hover {
+              background-color: #881014; }
+        html body .chef .contenido-chef .imagen-chef {
+          flex: 0 0 calc(50% - 1rem); }
+          html body .chef .contenido-chef .imagen-chef img {
+            max-width: 100%; }
+    html body .formulario-contacto {
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 5rem; }
+      html body .formulario-contacto .informacion-contacto {
+        flex: 0 0 calc(50% - 1rem);
+        background-color: #000;
+        color: #fff;
+        height: 60rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        html body .formulario-contacto .informacion-contacto h3 {
+          font-size: 4rem;
+          font-family: "Arima Madurai", cursive;
+          font-weight: 700; }
+        html body .formulario-contacto .informacion-contacto p {
+          font-size: 2.2rem; }
+        html body .formulario-contacto .informacion-contacto i {
+          margin-right: 1rem; }
+        html body .formulario-contacto .informacion-contacto .redes-sociales i {
+          font-size: 3rem; }
+      html body .formulario-contacto .formulario {
+        flex: 0 0 calc(50% - 1rem);
+        padding: 5rem; }
+        html body .formulario-contacto .formulario .input-formulario label {
+          display: block;
+          font-size: 2rem;
+          font-family: "Mulish", sans-serif;
+          font-weight: 400;
+          margin-bottom: 1.5rem; }
+        html body .formulario-contacto .formulario .input-formulario input {
+          width: 100%;
+          padding: 1rem 1.6rem;
+          border: 1px solid #e1e1e1;
+          border-radius: 5px;
+          outline: none; }
+        html body .formulario-contacto .formulario .input-formulario textarea {
+          width: 100%;
+          height: 20rem;
+          resize: none;
+          padding: 1rem 1.6rem;
+          border: 1px solid #e1e1e1;
+          border-radius: 5px;
+          outline: none;
+          font-family: "Mulish", sans-serif;
+          font-weight: 400; }
+        html body .formulario-contacto .formulario .input-formulario .btn {
+          background-color: #00A149; }
+          html body .formulario-contacto .formulario .input-formulario .btn:hover {
+            background-color: #881014; }
+    html body .pie-pagina {
+      background-color: #141414;
+      padding: 5rem; }
+      html body .pie-pagina .contenedor-piepagina {
+        display: flex;
+        justify-content: space-between; }
+        html body .pie-pagina .contenedor-piepagina .info {
+          flex: 0 0 calc(25% - 1rem);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center; }
+          html body .pie-pagina .contenedor-piepagina .info h3 {
+            font-weight: bold;
+            color: #fff;
+            font-size: 2.2rem; }
+          html body .pie-pagina .contenedor-piepagina .info p {
+            color: #fff;
+            font-size: 1.8rem; }
+          html body .pie-pagina .contenedor-piepagina .info i {
+            color: #fff; }
+          html body .pie-pagina .contenedor-piepagina .info input[type="email"] {
+            font-family: "Mulish", sans-serif;
+            font-weight: 400;
+            display: inline-block;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            outline: none;
+            width: 70%; }
+          html body .pie-pagina .contenedor-piepagina .info input[type="submit"] {
+            font-family: "Mulish", sans-serif;
+            font-weight: 400;
+            padding: .5rem 2rem;
+            font-size: 2rem;
+            border-radius: 0;
+            border: none;
+            background-color: #00A149; }
+            html body .pie-pagina .contenedor-piepagina .info input[type="submit"]:hover {
+              background-color: #881014; }
+    html body .footer {
+      display: inline-block;
+      background-color: #000;
+      width: 100%;
+      padding: 2rem; }
+      html body .footer p {
+        text-align: center;
+        color: #fff;
+        font-size: 2rem; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+@media screen and (max-width: 992px) {
+  html body .encabezado .contenedor-navegacion .contenido-navegacion .navegacion {
+    width: 100%;
+    align-items: center; }
+    html body .encabezado .contenedor-navegacion .contenido-navegacion .navegacion a {
+      font-size: 3rem; }
+    html body .encabezado .contenedor-navegacion .contenido-navegacion .navegacion .btn-cerrar {
+      right: 30px; }
+  html body .encabezado .contenido-header .contenedor-encabezado .texto-encabezado h2 {
+    font-size: 4rem; }
+  html body .encabezado .contenido-header .contenedor-encabezado .texto-encabezado .btn {
+    font-size: 2rem; }
+  html body .contenedor-nosotros {
+    display: flex;
+    flex-direction: column; }
+    html body .contenedor-nosotros .texto-nosotros {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      html body .contenedor-nosotros .texto-nosotros .bienvenida {
+        text-align: center; }
+      html body .contenedor-nosotros .texto-nosotros h1 {
+        text-align: center; }
+      html body .contenedor-nosotros .texto-nosotros .descripcion {
+        text-align: center; }
+    html body .contenedor-nosotros .imagenes-nosotros {
+      width: 100%; }
+  html body .menu {
+    padding-top: 4rem;
+    width: 95%;
+    margin: 0 auto; }
+    html body .menu .texto-platillos {
+      text-align: center;
+      font-size: 5rem; }
+    html body .menu .botones-platillos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; }
+      html body .menu .botones-platillos button {
+        flex: 0 0 calc(50% - 1rem);
+        padding: 1rem 3rem; }
+    html body .menu .platillos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      html body .menu .platillos .platillo {
+        flex: 0 0 calc(100% - 1rem); }
+        html body .menu .platillos .platillo .precio {
+          display: flex;
+          justify-content: space-between; }
+  html body .separador {
+    width: 95%;
+    margin: 0 auto;
+    background-image: url("/img/ensalada.webp");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2; }
+    html body .separador .contenido-separador h2 {
+      font-size: 3rem;
+      text-align: center; }
+    html body .separador .contenido-separador p {
+      font-size: 2rem;
+      text-align: center; }
+    html body .separador .contenido-separador .btn {
+      font-size: 1.5rem;
+      text-align: center; }
+  html body .chef {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    html body .chef .contenido-chef {
+      display: block; }
+      html body .chef .contenido-chef .texto-chef {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        html body .chef .contenido-chef .texto-chef h3 {
+          font-size: 2.5rem;
+          font-weight: bold; }
+        html body .chef .contenido-chef .texto-chef .btn {
+          display: inline-block;
+          margin: 1rem auto; }
+  html body .formulario-contacto {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; }
+    html body .formulario-contacto .informacion-contacto {
+      flex: 0 0 calc(100% - 1rem);
+      background-color: #000;
+      color: #fff;
+      height: 60rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2.5rem; }
+      html body .formulario-contacto .informacion-contacto h3 {
+        font-size: 2.5rem;
+        font-family: "Arima Madurai", cursive;
+        font-weight: 700; }
+      html body .formulario-contacto .informacion-contacto p {
+        font-size: 1.5rem; }
+      html body .formulario-contacto .informacion-contacto i {
+        margin-right: 1rem; }
+      html body .formulario-contacto .informacion-contacto .redes-sociales i {
+        font-size: 2.5rem; }
+    html body .formulario-contacto .formulario {
+      flex: 0 0 calc(100% - 1rem);
+      padding: 2rem 0 0 0; }
+      html body .formulario-contacto .formulario .input-formulario label {
+        padding: 1rem 0 0 0;
+        display: block;
+        font-size: 2rem;
+        font-family: "Mulish", sans-serif;
+        font-weight: 400;
+        margin-bottom: 1.5rem; }
+      html body .formulario-contacto .formulario .input-formulario input {
+        width: 100%;
+        padding: 1rem 1.6rem;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        outline: none; }
+      html body .formulario-contacto .formulario .input-formulario textarea {
+        width: 100%;
+        height: 20rem;
+        resize: none;
+        padding: 1rem 1.6rem;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        outline: none;
+        font-family: "Mulish", sans-serif;
+        font-weight: 400; }
+      html body .formulario-contacto .formulario .input-formulario .btn {
+        background-color: #00A149; }
+  html body .pie-pagina {
+    padding: 2rem; }
+    html body .pie-pagina .contenedor-piepagina {
+      display: block; }
+      html body .pie-pagina .contenedor-piepagina .info h3 {
+        text-align: center; }
+      html body .pie-pagina .contenedor-piepagina .info p {
+        text-align: center; } }
+
+/*# sourceMappingURL=estilos.css.map */
